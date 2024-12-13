@@ -3,7 +3,7 @@
         
         <x-slot name="logo">
             <a href="/">
-                <img class="w-20 h-20" src="{{ asset('img/logo.svg')}} " alt="Logo">
+                <img class="w-20 h-20" src="{{ asset('img/EduReport.png')}} " alt="Logo"><b>EduReport</b>
             </a>
         </x-slot>
 
