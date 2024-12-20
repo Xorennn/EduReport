@@ -1,3 +1,10 @@
+<!-- @if(Auth::check())
+    <p>Selamat datang, {{ Auth::user()->name }}!</p>
+    <a href="{{ url('user') }}">Kembali ke Halaman Pengguna</a>
+@else
+    <a href="{{ route('login') }}">Masuk</a>
+@endif -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,9 +12,9 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>EduReport</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
+    <title>EduReport</title>
 
     <!-- Favicons -->
     <link href="assets/img/EduReport.png" rel="icon">
@@ -97,7 +104,7 @@
 
                 <div class="row <div class=" image col-xl-5 d-flex align-items-stretch justify-content-center
                     justify-content-xl-start" data-aos="fade-right" data-aos-delay="150">
-                    <img src="img/anak.png" alt="" class="img-fluid">
+                    <img src="img/gambar_tengah.png" alt="" class="img-fluid">
                 </div>
 
                 <div class="col-xl-7 d-flex align-items-stretch pt-4 pt-xl-0" data-aos="fade-left" data-aos-delay="300">
@@ -106,7 +113,7 @@
                             <div class="col-md-6 d-md-flex align-items-md-stretch">
                                 <div class="count-box">
                                     <i class="bi bi-people"></i>
-                                    <span data-purecounter-start="0" data-purecounter-end="10"
+                                    <span data-purecounter-start="0" data-purecounter-end={{ $total_pengguna }}
                                         data-purecounter-duration="1" class="purecounter"></span>
                                     <p><strong>Pengguna</strong><br>Daftar pengguna <b>EduReport</b></p>
                                 </div>
@@ -115,7 +122,7 @@
                             <div class="col-md-6 d-md-flex align-items-md-stretch">
                                 <div class="count-box">
                                     <i class="bi bi-journal-text"></i>
-                                    <span data-purecounter-start="0" data-purecounter-end="20"
+                                    <span data-purecounter-start="0" data-purecounter-end={{ $total_laporan }}
                                         data-purecounter-duration="1" class="purecounter"></span>
                                     <p><strong>Pengaduan</strong> <br> Jumlah pengaduan yang sudah dilaporkan</p>
                                 </div>
@@ -124,11 +131,12 @@
                             <div class="col-md-6 d-md-flex align-items-md-stretch">
                                 <div class="count-box">
                                     <i class="bi-journal-check"></i>
-                                    <span data-purecounter-start="0" data-purecounter-end="15"
+                                    <span data-purecounter-start="0" data-purecounter-end={{ $total_laporan_selesai }}
                                         data-purecounter-duration="1" class="purecounter"></span>
                                     <p><strong>Tuntas</strong> <br> Jumlah laporan yang sudah ditangani</p>
                                 </div>
                             </div>
+                           
 
                         </div>
                     </div><!-- End .content-->

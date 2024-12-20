@@ -106,4 +106,5 @@ class PengaduanController extends Controller
         Alert::success('Berhasil', 'Pengaduan telah di hapus');
         return redirect('admin/pengaduans');
     }
+    
 }

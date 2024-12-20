@@ -41,23 +41,45 @@
             </div>
 
             <!-- Password -->
-            <div class="mt-4">
+            <!-- <div class="mt-4">
                 <x-label for="password" :value="__('Password')" />
 
                 <x-input id="password" class="block mt-1 w-full"
                                 type="password"
                                 name="password"
                                 required autocomplete="new-password" />
+            </div> -->
+
+            <!-- <div class="mt-4">
+                <x-label for="password" :value="__('Password')" />
+                <x-input id="password" class="block mt-1 w-full"
+                                type="password"
+                                name="password"
+                                required autocomplete="new-password" 
+                                oninput="checkPasswordLength()" />
+                <p id="password-warning" class="text-red-600 text-sm hidden">Password harus terdiri dari minimal 8 karakter.</p> 
+            </div> -->
+
+            <div class="mt-4">
+                <x-label for="password" :value="__('Password')" />
+                <x-input id="password" class="block mt-1 w-full"
+                                type="password"
+                                name="password"
+                                required autocomplete="new-password" 
+                                oninput="checkPasswordLength()" />
+                <p id="password-warning" class="text-red-600 text-sm hidden">Password harus terdiri dari minimal 8 karakter.</p>
+                <p class="text-red-600 text-sm">*Password harus terdiri dari minimal 8 karakter.</p>
             </div>
 
             <!-- Confirm Password -->
             <div class="mt-4">
                 <x-label for="password_confirmation" :value="__('
-                konfirmasi sandi')" />
+                Konfirmasi Password')" />
 
                 <x-input id="password_confirmation" class="block mt-1 w-full"
                                 type="password"
                                 name="password_confirmation" required />
+                                
             </div>
 
             <div class="flex items-center justify-end mt-4">

@@ -1,10 +1,26 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+// use App\Http\Controllers\HomeController;
+// use App\Http\Controllers\PengaduanController;
 
+// Route::post('/pengaduan/store', [PengaduanController::class, 'store'])->name('pengaduan.store');
+
+
+// Route::get('/', [HomeController::class, 'index']);
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+        'total_pengguna' => DB::table('users')->count(),
+        'total_laporan' => DB::table('pengaduan')->count(),
+        'total_laporan_selesai' => DB::table('pengaduan')->where('status', 'Selesai')->count(),
+    ];
+    return view('welcome', $data);
 });
+// Route::get('/', function () {
+    
+//     return view('welcome');
+// });
 
 // Admin/Petugas
 Route::prefix('admin')

@@ -11,9 +11,24 @@
 <script src="{{ $cdn ?? asset('vendor/sweetalert/sweetalert.all.js') }}"></script>
 @endif
 
-<script>
+<!-- <script>
 Swal.fire({
     text: "{{ Session::pull('alert.config') }}"
 });
+</script> -->
+
+<script>
+Swal.fire({
+    title: "Berhasil",
+    text: "{{ Session::pull('alert.config') }}",
+    icon: "success",
+    timer: 5000,
+    width: "32rem",
+    heightAuto: true,
+    padding: "1.25rem",
+    showConfirmButton: true,
+    showCloseButton: false,
+});
 </script>
+
 @endif

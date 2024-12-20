@@ -1,6 +1,7 @@
 @extends('layouts.masyarakat')
 
-@section('title')
+@section('title' )
+
 Dashboard
 @endsection
 @section('content')
@@ -12,7 +13,25 @@ Dashboard
     <h2 class="my-6 text-2xl font-semibold text-center text-gray-700 dark:text-gray-200">
     </h2>
 
+    <!-- @if (session('success'))
+    <script>
+Swal.fire({
+    title: "Berhasil dikirim",
+    text: "{{ Session::pull('alert.config') }}",
+    icon: "success",
+    timer: 5000,
+    width: "32rem",
+    heightAuto: true,
+    padding: "1.25rem",
+    showConfirmButton: true,
+    showCloseButton: false,
+});
+</script>
 
+@endif -->
+
+
+        
     @if ($errors->any())
     <div class="alert alert-danger">
       <ul>

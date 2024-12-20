@@ -32,6 +32,8 @@
                                 type="password"
                                 name="password"
                                 required autocomplete="current-password" />
+                                <p id="password-warning" class="text-red-600 text-sm hidden">Password harus terdiri dari minimal 8 karakter.</p>
+                <p class="text-red-600 text-sm">*Password harus terdiri dari minimal 8 karakter.</p>
             </div>
 
             <!-- Remember Me -->
